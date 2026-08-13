@@ -4,9 +4,12 @@
   "description": "",
   "license": "ISC",
   "author": "Pratyush",
-  "type": "commonjs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
