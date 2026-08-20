@@ -14,10 +14,13 @@
     "prettier": "^3.9.6"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongoose": "^9.9.2"
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.2",
+    "mongoose-paginate-v2": "^1.9.5"
   }
 }
