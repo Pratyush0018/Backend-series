@@ -111,7 +111,7 @@ const loginUser = asyncHandler(async (req, res) => {
    
    
    if (!username && !email) {
-    throw new ApiError(400, "username or password is required")
+    throw new ApiError(400, "username or email is required")
    }
   const user = await User.findOne({
         $or: [{username}, {email}]
@@ -180,7 +180,7 @@ return res
 })
 
 const refreshAccessToken = asyncHandler(async (req, res) => {
-    const incomingRefreshToken = req.cookie.refreshToken || req.body.refreshToken
+    const incomingRefreshToken = req.cookies.refreshToken || req.body.refreshToken
 
     if (!incomingRefreshToken){
         throw new ApiError(401, "unauthorized request")
@@ -202,11 +202,11 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
       throw new ApiError(401, "Refresh token is expired or used")
     }
   
-     const option = {
+     const options = {
       httpOnly: true,
       secure: true
      }
-  const {accessToken , newRefreshToken} = await 
+  const {accessToken , refreshToken:  newRefreshToken } = await 
   genrateAccessAndRefereshTokens(user._id)
   
   return res
