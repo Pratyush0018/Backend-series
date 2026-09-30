@@ -11,6 +11,7 @@ const tweetSchema = new Schema({
     ref: "User"
    }
 
+
 },
 {
     timestamps: true
