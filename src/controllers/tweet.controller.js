@@ -78,7 +78,7 @@ const getUserTweets = asyncHandler(async (req, res) => {
         $addFields: {
             owner: {
                 $first: "$ownerDetails",
-            }
+            },
         }
      },
      {
