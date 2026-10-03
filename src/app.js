@@ -15,15 +15,15 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 // routes import
-import userRouter from './routes/user.routes.js'
-import healthcheckRouter from "./routes/healthcheck.routes.js"
-import tweetRouter from "./routes/tweet.routes.js"
-import subscriptionRouter from "./routes/subscription.routes.js"
-import videoRouter from "./routes/video.routes.js"
-import commentRouter from "./routes/comment.routes.js"
-import likeRouter from "./routes/like.routes.js"
-import playlistRouter from "./routes/playlist.routes.js"
-import dashboardRouter from "./routes/dashboard.routes.js"
+import userRouter from './routes/user.route.js'
+import healthcheckRouter from "./routes/healthcheck.route.js"
+import tweetRouter from "./routes/tweet.route.js"
+import subscriptionRouter from "./routes/subscription.route.js"
+import videoRouter from "./routes/video.route.js"
+import commentRouter from "./routes/comment.route.js"
+import likeRouter from "./routes/like.route.js"
+import playlistRouter from "./routes/playlist.route.js"
+import dashboardRouter from "./routes/dashboard.route.js"
 
 
 // routes declaration 
